@@ -63,28 +63,6 @@ Local Testing	Minikube
   Deploy	        Helm + Argo CD	             Auto-deploy new version to EKS cluster
   Monitor	        Argo CD	                     Detect drift, ensure GitOps sync
 
-**Repository Structure**
-devops-pipeline/
-│
-├── app/                     # Application source code
-│   ├── Dockerfile
-│   └── ...
-│
-├── helm-chart/              # Helm deployment files
-│   ├── Chart.yaml
-│   ├── templates/
-│   │   ├── deployment.yaml
-│   │   ├── service.yaml
-│   │   └── ingress.yaml
-│   └── values.yaml
-│
-├── .github/
-│   └── workflows/
-│       └── ci.yml           # GitHub Actions pipeline
-│
-├── manifests/               # (optional) Raw k8s manifests
-└── README.md
-
 **How It Works**
 
   Push code to GitHub → triggers CI.
@@ -124,4 +102,5 @@ Email: surabhimahendran040@gmail.com
 
 This project demonstrates a real-world production-ready DevOps pipeline, integrating CI/CD, container orchestration, and GitOps automation.
 It shows how a single code commit can automatically roll out to cloud infrastructure — achieving true Continuous Delivery.
+
 
