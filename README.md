@@ -27,6 +27,87 @@ Developer → GitHub → GitHub Actions (CI)
   
   The image is pushed to Docker Hub.
 
+**How to Run the Project**
+
+Option 1: Run Locally (Go Only)
+
+Clone the repository:
+
+git clone https://github.com/surabhimahi/go-web-app-devops.git
+cd go-web-app-devops
+
+
+Run the Go application:
+
+go run main.go
+
+
+Open your browser and visit:
+
+http://localhost:8080
+
+Option 2: Run with Docker
+
+Build the Docker image:
+
+docker build -t go-web-app .
+
+
+Run the container:
+
+docker run -d -p 8080:8080 go-web-app
+
+
+Access the app at:
+
+http://localhost:8080
+
+Option 3: Run with Kubernetes
+
+Make sure you have kubectl and minikube installed and running:
+
+minikube start
+
+
+Apply the Kubernetes deployment and service files:
+
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
+
+Get the service URL:
+
+minikube service go-web-app-service --url
+
+
+Open the URL in your browser to access the application.
+
+Option 4: Run via CI/CD (GitHub Actions)
+
+The project includes a GitHub Actions workflow (.github/workflows/ci.yml) that automatically:
+
+Builds and tests the Go application
+
+Builds the Docker image
+
+Pushes the image to Docker Hub
+
+Deploys to Kubernetes cluster (if configured)
+
+To trigger it, just push a commit to the main branch.
+
+Prerequisites
+
+Make sure you have the following installed:
+
+Go (v1.20 or above)
+
+Docker
+
+Kubernetes (kubectl + minikube)
+
+Git
+
 **Continuous Delivery (Helm + Argo CD):**
 
   The Helm values.yaml file is automatically updated with the new image tag.
@@ -102,5 +183,6 @@ Email: surabhimahendran040@gmail.com
 
 This project demonstrates a real-world production-ready DevOps pipeline, integrating CI/CD, container orchestration, and GitOps automation.
 It shows how a single code commit can automatically roll out to cloud infrastructure — achieving true Continuous Delivery.
+
 
 
