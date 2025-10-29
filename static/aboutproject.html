@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Project | Surabhi DevOps Engineer</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #fafafa;
+      color: #222;
+    }
+
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 80px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #ff8800;
+    }
+
+    .cta-btn {
+      background-color: #ff8800;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .cta-btn:hover {
+      background-color: #e66e00;
+      transform: translateY(-2px);
+    }
+
+    main {
+      padding: 60px 80px;
+      line-height: 1.7;
+    }
+
+    h1, h2 {
+      color: #111;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 30px;
+      color: #ff8800;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        padding: 40px 20px;
+      }
+      nav {
+        padding: 15px 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h2 style="color:#ff8800; font-weight:700;">Surabhi M</h2>
+      <ul>
+        <li><a href="home">Home</a></li>
+        <li><a href="about">About Me</a></li>
+        <li><a href="aboutproject.html" class="active">About Project</a></li>
+        <li><a href="contact">Contact</a></li>
+      </ul>
+      <button class="cta-btn">Let’s Connect</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1>About the Project</h1>
+    <p>
+      This project showcases my complete **DevOps pipeline automation**, built with modern cloud technologies 
+      to demonstrate continuous integration, continuous deployment, and infrastructure management.
+    </p>
+
+    <h2>Project Overview</h2>
+    <p>
+      The objective was to automate the deployment of a containerized web application on AWS, 
+      using **Docker**, **Kubernetes (EKS)**, and **ArgoCD**, ensuring zero-downtime rollouts 
+      and robust monitoring. The CI/CD pipeline was designed to handle end-to-end delivery 
+      — from code commits to live production updates.
+    </p>
+
+    <h2>Tools & Technologies Used</h2>
+    <ul>
+      <li><strong>GitHub Actions</strong> – for CI/CD automation and build pipelines</li>
+      <li><strong>Docker</strong> – for containerizing the application</li>
+      <li><strong>Helm</strong> – for packaging and deploying Kubernetes manifests</li>
+      <li><strong>ArgoCD</strong> – for GitOps-based continuous deployment</li>
+      <li><strong>AWS EKS</strong> – for scalable Kubernetes cluster hosting</li>
+      <li><strong>Terraform</strong> – for infrastructure provisioning (IaC)</li>
+    </ul>
+
+    <h2>Workflow Summary</h2>
+      <ol>
+        <li>Code changes are committed and pushed to the GitHub repository.</li>
+        <li>GitHub Actions automatically builds the latest Docker image and pushes it to Docker Hub.</li>
+        <li>Helm chart values are updated with the latest image tag.</li>
+        <li>Argo CD continuously monitors the Helm chart repository for changes.</li>
+        <li>When a new image version is detected, Argo CD automatically deploys the update to the Kubernetes cluster in EKS.</li>
+        <li>The app becomes available via an AWS LoadBalancer with an ingress controller managing routing.</li>
+      </ol>
+
+      <h2>Features Implemented</h2>
+      <ul>
+        <li>Automated Docker image build and push using GitHub Actions.</li>
+        <li>Dynamic image version updates in Helm charts.</li>
+        <li>Argo CD setup for GitOps-based deployment automation.</li>
+        <li>Ingress setup for external application access through AWS ELB.</li>
+        <li>Minikube used for local testing before production deployment.</li>
+        <li>Declarative and reproducible infrastructure using YAML manifests.</li>
+      </ul>
+
+    <h2>Key Learnings</h2>
+      <p>
+        Through this project, I learned to connect multiple DevOps tools into one automated ecosystem.  
+        The project strengthened my understanding of:
+      </p>
+      <ul>
+        <li>How CI/CD pipelines are designed and automated end-to-end.</li>
+        <li>How Argo CD enables GitOps-style continuous deployment.</li>
+        <li>How Helm simplifies versioned Kubernetes deployments.</li>
+        <li>Best practices for securing and managing workloads in AWS EKS.</li>
+      </ul>
+
+    <h2>Outcome</h2>
+    <p>
+      The final system enables <b>rapid, reliable, and repeatable deployments</b> across environments. 
+      It minimizes manual intervention, improves team velocity, and ensures high availability of applications.
+    </p>
+  </main>
+
+  <footer>
+    © 2025 Surabhi M | DevOps Portfolio
+  </footer>
+</body>
+</html>

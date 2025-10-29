@@ -1,68 +1,160 @@
-<Doctype html>
-<html>
-    <head>
-        <title>Contact</title>
-        <style>
-            body {
-                margin: 0;
-                padding: 0;
-            }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Surabhi M</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #fafafa;
+      color: #222;
+    }
 
-            header {
-                background-color: #333;
-                color: #fff;
-                padding: 10px 0;
-                text-align: center;
-            }
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-            nav ul {
-                list-style-type: none;
-                padding: 0;
-            }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 80px;
+    }
 
-            nav ul li {
-                display: inline;
-                margin-right: 10px;
-            }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
 
-            nav ul li a {
-                color: #fff;
-                text-decoration: none;
-            }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
-            main {
-                padding: 20px;
-            }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #ff8800;
+    }
 
-            section {
-                margin-bottom: 20px;
-            }
+    .cta-btn {
+      background-color: #ff8800;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
 
-            footer {
-                background-color: #333;
-                color: #fff;
-                text-align: center;
-                padding: 10px 0;
-                position: fixed;
-                bottom: 0;
-                width: 100%;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <ul>
-                    <li><a href="home">Home</a></li>
-                    <li><a href="about">About</a></li>
-                    <li><a href="contact">Contact</a></li>
-                    <li><a href="courses">Courses</a></li>
-                </ul>
-            </nav>
-        </header>
+    .cta-btn:hover {
+      background-color: #e66e00;
+      transform: translateY(-2px);
+    }
 
-        <main>
-            <section>
-                <h1>Contact Us</h1>
-                <p>For any doubts while learning, Join our Members only exclusive slack channel</p>
-                <a href="https://www.youtube.com/abhishekVeeramalla/join">Join Slack</a>
+    main {
+      padding: 60px 80px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    p {
+      color: #555;
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      text-decoration: none;
+      background-color: #ff8800;
+      color: #fff;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .social-links a:hover {
+      background-color: #e66e00;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 900px) {
+      nav {
+        padding: 15px 20px;
+      }
+      main {
+        padding: 40px 20px;
+      }
+      .social-links {
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <h2 style="color:#ff8800; font-weight:700;">Surabhi M</h2>
+      <ul>
+        <li><a href="home">Home</a></li>
+        <li><a href="about">About Me</a></li>
+        <li><a href="aboutproject.html">About Project</a></li>
+        <li><a href="contact" class="active">Contact</a></li>
+      </ul>
+      <button class="cta-btn">Let’s Connect</button>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <h1>Contact Me</h1>
+      <p>Let's connect! Feel free to reach out for collaborations, DevOps discussions, or project inquiries.</p>
+
+      <div class="social-links">
+        <a href="mailto:surabhimahendran040@gmail.com">📧 Email</a>
+        <a href="https://github.com/surabhimahi" target="_blank">💻 GitHub</a>
+        <a href="https://www.linkedin.com/in/surabhi-mahendran-a4751a20a/" target="_blank">🔗 LinkedIn</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Surabhi M | DevOps Portfolio
+  </footer>
+</body>
+</html>

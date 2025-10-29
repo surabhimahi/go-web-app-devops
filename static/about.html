@@ -1,114 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Surabhi M</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f9f9f9;
-            color: #333;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Me | Surabhi DevOps Engineer</title>
+  <style>
+    body {
+      font-family: "Poppins", sans-serif;
+      margin: 0;
+      background-color: #fafafa;
+      color: #222;
+    }
 
-        header {
-            background-color: #222;
-            color: #fff;
-            padding: 15px 0;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
+    header {
+      background-color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
 
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 80px;
+    }
 
-        nav ul li {
-            display: inline-block;
-            margin: 0 15px;
-        }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
 
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
-        nav ul li a:hover {
-            color: #00bcd4;
-        }
+    nav ul li a:hover,
+    nav ul li a.active {
+      color: #ff8800;
+    }
 
-        main {
-            padding: 40px 20px;
-            max-width: 800px;
-            margin: 0 auto;
-        }
+    .cta-btn {
+      background-color: #ff8800;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
 
-        h1 {
-            text-align: center;
-            color: #222;
-            margin-bottom: 20px;
-        }
+    .cta-btn:hover {
+      background-color: #e66e00;
+      transform: translateY(-2px);
+    }
 
-        p {
-            line-height: 1.7;
-            font-size: 16px;
-            margin-bottom: 15px;
-        }
+    main {
+      padding: 60px 80px;
+      line-height: 1.7;
+    }
 
-        footer {
-            background-color: #222;
-            color: #fff;
-            text-align: center;
-            padding: 12px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            font-size: 14px;
-            letter-spacing: 0.5px;
-        }
+    h1, h2 {
+      color: #111;
+    }
 
-        @media (max-width: 600px) {
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
+    h1 {
+      font-size: 2.4rem;
+      margin-bottom: 20px;
+    }
 
-            main {
-                padding: 20px;
-            }
-        }
-    </style>
+    h2 {
+      font-size: 1.4rem;
+      margin-top: 30px;
+      color: #ff8800;
+    }
+
+    p {
+      color: #555;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #fff;
+      color: #777;
+      font-size: 0.9rem;
+      border-top: 1px solid #eee;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 900px) {
+      main {
+        padding: 40px 20px;
+      }
+      nav {
+        padding: 15px 20px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
-                <li><a href="about.html" class="active">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="courses.html">Courses</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <h2 style="color:#ff8800; font-weight:700;">Surabhi M</h2>
+      <ul>
+        <li><a href="home">Home</a></li>
+        <li><a href="about" class="active">About Me</a></li>
+        <li><a href="aboutproject.html">About Project</a></li>
+        <li><a href="contact">Contact</a></li>
+      </ul>
+      <button class="cta-btn">Let’s Connect</button>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <h1>About the Author</h1>
-            <p>Hello! I'm <strong>Surabhi M</strong> — a passionate learner and technology enthusiast exploring the world of DevOps and software engineering.</p>
-            <p>This project reflects my journey of applying DevOps concepts like CI/CD, containerization, orchestration, and GitOps using tools such as Docker, Kubernetes (EKS/Minikube), Helm, Argo CD, and GitHub Actions.</p>
-            <p>Beyond my projects, I work as a <strong>Technical Trainer</strong> specializing in <strong>Java</strong> and <strong>Python</strong>. I love simplifying complex topics for learners and guiding them toward hands-on understanding.</p>
-            <p>I also contribute to open-source initiatives — still a newcomer, but learning every day. My goal is to keep growing and give back to the developer community that helped me learn.</p>
-        </section>
-    </main>
+  <main>
+    <h1>About Me</h1>
+    <p>
+      Hello! I’m <strong>Surabhi M</strong>, a passionate <strong>DevOps Engineer</strong> dedicated to simplifying 
+      software delivery through automation, scalability, and continuous improvement.
+    </p>
+    <p>
+      My expertise lies in bridging the gap between development and operations using modern DevOps tools and 
+      practices such as CI/CD pipelines, containerization, and cloud deployments.
+    </p>
 
-    <footer>
-        <p>&copy; 2025 Surabhi Mahendran | All Rights Reserved</p>
-    </footer>
+    <h2>My Areas of Expertise</h2>
+    <ul>
+      <li>Continuous Integration & Continuous Deployment (CI/CD)</li>
+      <li>Containerization with Docker & Orchestration using Kubernetes</li>
+      <li>Infrastructure as Code using Terraform</li>
+      <li>Monitoring, Logging, and Security Automation</li>
+      <li>Cloud Platforms — AWS, Azure, and GCP</li>
+    </ul>
+
+    <h2>I'm the one you look for </h2>
+    <ul>
+      <li>Strong problem-solving and analytical mindset</li>
+      <li>Team collaboration and clear communication</li>
+      <li>Focus on performance, reliability, and automation</li>
+      <li>Continuous learner who adapts to emerging technologies</li>
+    </ul>
+
+    <h2>Outside of Work</h2>
+    <p>
+      I enjoy exploring new technologies, solving logical puzzles, and mentoring beginners in cloud and DevOps.
+    </p>
+  </main>
+
+  <footer>
+    © 2025 Surabhi M | DevOps Portfolio
+  </footer>
 </body>
 </html>
