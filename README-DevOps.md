@@ -1,5 +1,6 @@
 # DevOpsify the go web application
 
+
 The main goal of this project is to implement DevOps practices in the Go web application. The project is a simple website written in Golang. It uses the `net/http` package to serve HTTP requests.
 
 DevOps practices include the following:
