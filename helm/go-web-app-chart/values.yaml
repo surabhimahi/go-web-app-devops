@@ -6,9 +6,9 @@ replicaCount: 1
 
 image:
   repository: surabhimahi/go-web-app
-  pullPolicy: IfNotPresent
+  pullPolicy: Always
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "10016307834"
+  tag: "latest"
 
 ingress:
   enabled: false
